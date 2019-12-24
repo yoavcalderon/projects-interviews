@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!---------------- Bootstrap ---------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!---------------- custom fonts (many options) to change in css ---------------->
+    <link
+        href="https://fonts.googleapis.com/css?family=Aguafina+Script|Aladin|Almendra|Almendra+SC|Amiri|Arbutus|Averia+Serif+Libre|Bilbo+Swash+Caps|Butcherman|Caesar+Dressing|Cantata+One|Ceviche+One|Charm|Chela+One|Condiment|Cookie|Creepster|Damion|Dr+Sugiyama|Eagle+Lake|Eater|Engagement|Ewert|Fredericka+the+Great|Frijole|Great+Vibes|Hanalei+Fill|IM+Fell+DW+Pica|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|Inknut+Antiqua|Italianno|Kaushan+Script|Knewave|Luckiest+Guy|Marck+Script|MedievalSharp|Metal+Mania|Mirza|Modak|Monoton|Mr+Dafoe|New+Rocker|Niconne|Noto+Sans+TC|Oleo+Script|Oleo+Script+Swash+Caps|Pacifico|Pirata+One|Rakkas|Redressed|Romanesco|Rye|Sancreek|Seaweed+Script|Shojumaru|Shrikhand|Special+Elite|UnifrakturCook:700|UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+
+    <!---------------- css ---------------->
+    <link rel="stylesheet" href="TomaxEx.css">
+    <!---------------- jQuery ---------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!---------------- Canvas ---------------->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!---------------- interactJs ---------------->
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <!---------------- stage 1 user data, see js for documentation ------------------>
+    <script src="TomaxExUserData2.js">
+    </script>
+</head>
+<!------------------- stage 2 page body ------------------->
+
+<body>
+    <section>
+        <header>
+            <h1>welcome to tomax exercise</h1>
+        </header>
+        <aside>
+            <!------------------- stage 2.1 present data with table ------------------->
+            <table border="1" id="table">
+                <tr>
+                    <th>userId</th>
+                    <th>userName</th>
+                    <th>userPicture</th>
+                </tr>
+                <!---------------- stage 2.2 aside script, see js for documentation ------------------>
+                <script src="TomaxExAsideScript.js">
+                    var Arr = loadUsersArr(); 
+                </script>
+            </table>
+            <!-- buttons -->
+            <div>
+                <div id="buttons"><button id="save">Save as image</button></div>
+            </div>
+        </aside>
+        
+        <!------------------- stage 3 Image manipulation ------------------->
+        <!--- main tag related to drag event and will allow us to drop img in main component -->
+        <main id="divMain" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="photo"></div>
+            <script>
+                
+            </script>
+        </main>
+        <footer>made by yoav calderon &copy;</footer>
+    </section>
+    <!------------------- stage 3.1 Drag  ------------------------->
+    <script src="TomaxExDrag.js"></script>
+    <!------------------- stage 3.2 Resize  ------------------------->
+    <script src="TomaxExResize.js"></script>
+    <!------------------- stage 3.3 Rotate  ------------------------->
+    <script src="TomaxExRotate.js"></script>
+    <!------------------- stage 3.4 Download main component as image ------------------------->
+    <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+    <script src="TomaxExDownload.js"></script>
+</script>
+
+
+
+
+</body>
+
+</html>
